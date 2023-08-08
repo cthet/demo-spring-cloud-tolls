@@ -1,0 +1,26 @@
+server:
+  port: 8888
+encrypt:
+  key: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+spring:
+  security:
+    user:
+      name: user
+      password: 1234
+  cloud:
+    config:
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/cthet/demo-spring-cloudconfig-tolls
+          search-paths:
+          - station*
+          repos:
+            perf:
+              pattern: '*/perf'
+              uri: https://github.com/cthet/demo-spring-cloudconfig-tolls-perf
+              search-paths:
+                - 'station*'
+
+
